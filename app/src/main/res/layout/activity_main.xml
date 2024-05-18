@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/nav_bar_gradient"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="124dp"
+            android:layout_height="35dp"
+            android:src="@drawable/logoipsum"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp"/>
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_back_button"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_back"
+            android:background="@null"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="24dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vehicles_button"
+            android:layout_width="47dp"
+            android:layout_height="40dp"
+            android:text="Vehicles"
+            android:background="@null"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:paddingTop="2dp"
+            android:fontFamily="@font/dm_sans"
+            android:drawableTop="@drawable/ic_car_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zones_button"
+            android:layout_width="34dp"
+            android:layout_height="40dp"
+            android:text="Zones"
+            android:background="@null"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/dm_sans"
+            android:drawableTop="@drawable/ic_zones_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/vehicles_button"
+            android:layout_marginEnd="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:navGraph="@navigation/main_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

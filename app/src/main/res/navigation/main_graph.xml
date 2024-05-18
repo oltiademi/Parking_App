@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/paymentInfoFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_payment_info"
+        android:id="@+id/paymentInfoFragment"
+        android:name="com.example.parking.ui.fragment.PaymentInfoFragment"
+        android:label="PaymentInfoFragment" >
+        <argument android:name="plateText"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_paymentInfoFragment_to_bottomSheetPlateFragment"
+            app:destination="@id/bottomSheetPlateFragment" />
+        <action
+            android:id="@+id/action_paymentInfoFragment_to_bottomSheetAreaFragment"
+            app:destination="@id/bottomSheetAreaFragment" />
+        <action
+            android:id="@+id/action_paymentInfoFragment_to_bottomSheetReminderFragment"
+            app:destination="@id/bottomSheetReminderFragment" />
+        <action
+            android:id="@+id/action_paymentInfoFragment_to_firstTimeUserBottomSheetFragment"
+            app:destination="@id/firstTimeUserBottomSheetFragment" />
+        <action
+            android:id="@+id/action_paymentInfoFragment_to_cityZonesFragment"
+            app:destination="@id/cityZonesFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_city_zones"
+        android:id="@+id/cityZonesFragment"
+        android:name="com.example.parking.ui.fragment.CityZonesFragment"
+        android:label="CityZonesFragment" >
+        <action
+            android:id="@+id/action_cityZonesFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <dialog
+        tools:layout="@layout/bottom_sheet_plates_dialog"
+        android:id="@+id/bottomSheetPlateFragment"
+        android:name="com.example.parking.ui.bottomsheet.BottomSheetPlateFragment"
+        android:label="BottomSheetPlateFragment" >
+        <action
+            android:id="@+id/action_bottomSheetPlateFragment_to_paymentInfoFragment"
+            app:destination="@id/paymentInfoFragment" />
+    </dialog>
+    <dialog
+        tools:layout="@layout/bottom_sheet_area_dialog"
+        android:id="@+id/bottomSheetAreaFragment"
+        android:name="com.example.parking.ui.bottomsheet.BottomSheetAreaFragment"
+        android:label="BottomSheetAreaFragment" >
+        <action
+            android:id="@+id/action_bottomSheetAreaFragment_to_paymentInfoFragment"
+            app:destination="@id/paymentInfoFragment" />
+    </dialog>
+    <dialog
+        tools:layout="@layout/bottom_sheet_reminder_dialog"
+        android:id="@+id/bottomSheetReminderFragment"
+        android:name="com.example.parking.ui.bottomsheet.BottomSheetReminderFragment"
+        android:label="BottomSheetReminderFragment" >
+        <action
+            android:id="@+id/action_bottomSheetReminderFragment_to_paymentInfoFragment"
+            app:destination="@id/paymentInfoFragment" />
+    </dialog>
+    <dialog
+        tools:layout="@layout/bottom_sheet_first_time_user_dialog"
+        android:id="@+id/firstTimeUserBottomSheetFragment"
+        android:name="com.example.parking.ui.bottomsheet.FirstTimeUserBottomSheetFragment"
+        android:label="FirstTimeUserBottomSheetFragment" >
+        <action
+            android:id="@+id/action_firstTimeUserBottomSheetFragment_to_paymentInfoFragment"
+            app:destination="@id/paymentInfoFragment" />
+        <action
+            android:id="@+id/action_firstTimeUserBottomSheetFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+    </dialog>
+    <fragment
+        tools:layout="@layout/fragment_vehicles"
+        android:id="@+id/vehiclesFragment"
+        android:name="com.example.parking.ui.fragment.VehiclesFragment"
+        android:label="VehiclesFragment" >
+        <action
+            android:id="@+id/action_vehiclesFragment_to_bottomSheetPlateFragment"
+            app:destination="@id/bottomSheetPlateFragment" />
+        <action
+            android:id="@+id/action_vehiclesFragment_to_firstTimeUserBottomSheetFragment"
+            app:destination="@id/firstTimeUserBottomSheetFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_maps"
+        android:id="@+id/mapsFragment"
+        android:name="com.example.parking.ui.fragment.MapsFragment"
+        android:label="MapsFragment" />
+</navigation>

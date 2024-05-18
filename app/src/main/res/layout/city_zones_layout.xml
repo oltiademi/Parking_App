@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7EAF3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/area_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area 1"
+        android:fontFamily="@font/dm_sans"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/euro_per_hr_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EUR/hr"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/bregu_diellit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bregu i diellit"
+        android:textColor="#656577"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintTop_toBottomOf="@id/area_number_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/ulpiana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ulpiana"
+        android:textColor="#656577"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintTop_toBottomOf="@id/area_number_text"
+        app:layout_constraintStart_toEndOf="@id/tophane"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/kalabria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalabria"
+        android:textColor="#656577"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintTop_toBottomOf="@id/area_number_text"
+        app:layout_constraintStart_toEndOf="@id/bregu_diellit"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tophane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tophane"
+        android:textColor="#656577"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintTop_toBottomOf="@id/area_number_text"
+        app:layout_constraintStart_toEndOf="@id/kalabria"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/price_value_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.00"
+        android:textStyle="bold"
+        android:fontFamily="@font/dm_sans"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/euro_per_hr_textview"
+        app:layout_constraintTop_toTopOf="@id/euro_per_hr_textview"
+        app:layout_constraintBottom_toBottomOf="@id/euro_per_hr_textview" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_in_map_button"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:background="@drawable/parking_info_layout_button"
+        android:text="View in map"
+        android:fontFamily="@font/dm_sans"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ulpiana"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

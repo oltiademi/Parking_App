@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="222dp"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<TextView
+    android:id="@+id/set_reminder_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Set a parking reminder"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:fontFamily="@font/dm_sans"
+    android:textSize="18sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_margin="32dp" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/reminder_text"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder_text"
+        app:layout_constraintStart_toStartOf="@id/set_reminder_text"
+        app:layout_constraintTop_toBottomOf="@id/set_reminder_text"
+        android:layout_marginTop="16dp"
+        android:textColor="#656577"
+        android:textSize="16sp"
+        android:fontFamily="@font/dm_sans"
+        android:gravity="start"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_reminder_button"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:fontFamily="@font/dm_sans"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/set_reminder_button"
+        app:layout_constraintTop_toTopOf="@id/set_reminder_button"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/set_reminder_button"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:text="Set reminder"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/dm_sans"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/parking_info_layout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel_reminder_button"
+        app:layout_constraintTop_toBottomOf="@id/reminder_text"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
