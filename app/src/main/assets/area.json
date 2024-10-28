@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Area 1",
+    "locations": [
+      {
+        "locationName": "Bregu i Diellit",
+        "geoPoints": [
+          42.6524,
+          21.1756
+        ]
+      },
+      {
+        "locationName": "Ulpiana",
+        "geoPoints": [
+          42.6505,
+          21.1608
+        ]
+      },
+      {
+        "locationName": "Kalabria",
+        "geoPoints": [
+          42.6432,
+          21.1435
+        ]
+      },
+      {
+        "locationName": "Tophane",
+        "geoPoints": [
+          42.6685,
+          21.1611
+        ]
+      }
+    ],
+    "price" : 2.00
+  },
+  {
+    "name": "Area 2",
+    "locations": [
+      {
+        "locationName": "Çamëria",
+        "geoPoints": [
+          42.6801,
+          21.1768
+        ]
+      },
+      {
+        "locationName": "Medresa",
+        "geoPoints": [
+          42.6710,
+          21.1644
+        ]
+      },
+      {
+        "locationName": "Taslixhe",
+        "geoPoints": [
+          42.6673,
+          21.1764
+        ]
+      },
+      {
+        "locationName": "Bledi",
+        "geoPoints": [
+          42.6711,
+          21.1857
+        ]
+      }
+    ],
+    "price" : 1.00
+
+  },
+  {
+    "name": "Area 3",
+    "locations": [
+      {
+        "locationName": "Besiana",
+        "geoPoints": [
+          42.6836,
+          21.1563
+        ]
+      },
+      {
+        "locationName": "Kodra e Trimave",
+        "geoPoints": [
+          42.6685,
+          21.1611
+        ]
+      },
+      {
+        "locationName": "Gallapi",
+        "geoPoints": [
+          42.6853,
+          21.1809
+        ]
+      },
+      {
+        "locationName": "Sinidoll",
+        "geoPoints": [
+          42.7033,
+          21.1649
+        ]
+      }
+    ],
+    "price" : 0.80
+  },
+  {
+    "name": "Area 4",
+    "locations": [
+      {
+        "locationName": "Rruga B",
+        "geoPoints": [
+          42.6524,
+          21.1756
+        ]
+      },
+      {
+        "locationName": "Mati 1",
+        "geoPoints": [
+          42.6428,
+          21.1914
+        ]
+      },
+      {
+        "locationName": "Matiqan",
+        "geoPoints": [
+          42.6451,
+          21.1921
+        ]
+      },
+      {
+        "locationName": "Lagjja e Spitalit",
+        "geoPoints": [
+          42.6410,
+          21.1713
+        ]
+      },
+      {
+        "locationName": "Rruga A",
+        "geoPoints": [
+          42.6432,
+          21.1435
+        ]
+      }
+    ],
+    "price" : 0.50
+  }
+]
