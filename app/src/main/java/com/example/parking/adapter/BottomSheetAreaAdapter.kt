@@ -3,10 +3,11 @@ package com.example.parking.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.parking.Area
 import com.example.parking.databinding.BottomSheetAreaItemBinding
 
-class BottomSheetAreaAdapter() : RecyclerView.Adapter<BottomSheetAreaAdapter.ViewHolder>() {
-    var area = mutableListOf<String>()
+class BottomSheetAreaAdapter(val onClick: (Area)->Unit) : RecyclerView.Adapter<BottomSheetAreaAdapter.ViewHolder>() {
+    var area = mutableListOf<Area>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -24,7 +25,10 @@ class BottomSheetAreaAdapter() : RecyclerView.Adapter<BottomSheetAreaAdapter.Vie
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val area = area[position]
         with(holder.bottomSheetItemBinding){
-            areaName.text = area
+            areaName.text = area.name
+        }
+        holder.itemView.setOnClickListener {
+            onClick(area)
         }
     }
 

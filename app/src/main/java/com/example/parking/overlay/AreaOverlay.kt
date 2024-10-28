@@ -8,7 +8,7 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Overlay
 
-class AreaOverlay(val coordinates: List<GeoPoint>) : Overlay() {
+class AreaOverlay(val coordinates: ArrayList<GeoPoint>) : Overlay() {
     override fun draw(canvas: Canvas?, mapView: MapView?, shadow: Boolean) {
         super.draw(canvas, mapView, shadow)
 

@@ -92,5 +92,9 @@
         tools:layout="@layout/fragment_maps"
         android:id="@+id/mapsFragment"
         android:name="com.example.parking.ui.fragment.MapsFragment"
-        android:label="MapsFragment" />
+        android:label="MapsFragment">
+        <argument
+            android:name="geoPoints"
+            app:argType="float[]" />
+    </fragment>
 </navigation>

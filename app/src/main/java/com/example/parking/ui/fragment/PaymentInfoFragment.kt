@@ -35,6 +35,7 @@ class PaymentInfoFragment : Fragment() {
             plates,
             object : TypeToken<ArrayList<String>>() {}.type
         )
+
         binding.plateLayout.penImage.setOnClickListener {
             if(theList ==null){
                 val action =
@@ -49,7 +50,7 @@ class PaymentInfoFragment : Fragment() {
 
         binding.areaLayout.penImage.setOnClickListener {
             val action =
-                PaymentInfoFragmentDirections.actionPaymentInfoFragmentToFirstTimeUserBottomSheetFragment()
+                PaymentInfoFragmentDirections.actionPaymentInfoFragmentToBottomSheetAreaFragment()
             findNavController().navigate(action)
         }
 
@@ -65,15 +66,24 @@ class PaymentInfoFragment : Fragment() {
         val myPref: SharedPreferences =
             requireActivity().getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val isReminderSet = myPref.getBoolean("isClicked", false)
+        if(isReminderSet){
+            startTimer(3600000)
+        }
         val lastPlate = myPref.getString("lastClickedPlate", "")
+        val lastArea = myPref.getString("lastClickedArea", "")
         if(lastPlate!!.isEmpty()){
             binding.plateLayout.plateTextview.text = "Select a vehicle plate"
         }else{
             binding.plateLayout.plateTextview.text = lastPlate
         }
-        if(isReminderSet){
-            startTimer(3600000)
+        if(lastArea!!.isEmpty()){
+            binding.plateLayout.plateTextview.text = "Select an area"
+        }else{
+            binding.areaLayout.areaNumberText.text = lastArea
         }
+
+        binding.paymentLayout.carPlatesValue.text = lastPlate
+        binding.paymentLayout.cityZoneValue.text = lastArea
     }
 
     private fun startTimer(duration: Long) {

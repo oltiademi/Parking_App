@@ -91,6 +91,7 @@
         android:layout_marginLeft="8dp"/>
 
     <include layout="@layout/parking_info_layout"
+        android:id="@+id/payment_layout"
         android:layout_width="0dp"
         android:layout_height="243dp"
         android:layout_marginHorizontal="16dp"
